@@ -1,0 +1,22 @@
+<h1>Edit Reservation</h1>
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <pre></pre>
+        <div class="form-group">
+            <label for="journeyDate"> Journey Date </label><br>
+            <input type="date" class="form-control" id="journeyDate" required [(ngModel)]="reservation.journeyDate" name="journeyDate">
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="busIds"> Bus ids</label><br>
+            <input type="text" class="form-control" id="busIds" required [(ngModel)]="reservation.busIds" name="busIds">
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="clientId"> Client id</label><br>
+            <input type="text" class="form-control" id="clientId" required [(ngModel)]="reservation.clientId" name="clientId">
+        </div>
+        <pre></pre>
+        <button class="btn btn-success" type="submit"> submit </button>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="card">
+
+</div>
+
+<div class='table-responsive'>
+    <table class='table' *ngIf='reservations.length'>
+    <thead>
+    <tr>
+        <th>Reservation id</th>
+        <th>Journey date</th>
+        <th>Bus number</th>
+        <th>Client Id</th>
+        <th>Modify</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let reservation of reservations">
+        <td> {{reservation.reservationId}} </td>
+        <td> {{reservation.journeyDate}} </td>
+        <td> {{reservation.busIds}} </td>
+        <td> {{reservation.clientId}} </td>
+        <td> <a routerLink="/update/{{reservation.reservationId}}">
+            <button class="btn btn-primary"> modify</button> </a> </td>
+        <td> <button class="btn btn btn-danger" (click)="deleteReservation(reservation.reservationId)"> delete </button> </td>
+    </tr>
+
+    </tbody>
+    </table>
+</div>
+
